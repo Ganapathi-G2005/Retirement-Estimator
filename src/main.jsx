@@ -95,4 +95,15 @@ function App(){
   </main>
  </div>;
 }
+createRoot(document.getElementById("root")).render(<App />); contentStyle={{background:"#2b2b2b",border:"1px solid #454545",borderRadius:10,color:"#f4f4f4"}} formatter={v=>money(v)}/><Legend wrapperStyle={{fontSize:12,color:"#b4b4b4"}}/><Area type="monotone" dataKey="Total corpus" stroke="#10a37f" strokeWidth={2.5} fill="url(#equityFill)"/><Area type="monotone" dataKey="FD" stroke="#8b8cf8" strokeWidth={1.5} fill="transparent"/><Area type="monotone" dataKey="Equity" stroke="#60a5fa" strokeWidth={1.5} fill="transparent"/></AreaChart></ResponsiveContainer>:<div className="empty-chart">Your projection will appear here.</div>}</div>
+      <div className="chart-footer"><span><span className="legend-dot"/> Returns are assumed constant</span><span>{p.years}-year accumulation period</span></div>
+     </div>
+     <div className="panel breakdown-panel"><div className="panel-heading"><div><h2>What this estimate assumes</h2><p>Important details behind the result.</p></div></div><div className="assumption-list"><div><span className="check">✓</span><span><b>Monthly contributions</b><small>Investment increases by {p.stepUp}% once each year.</small></span></div><div><span className="check">✓</span><span><b>Inflation-linked spending</b><small>Retirement spending rises by {p.inflation}% yearly, starting from today's target.</small></span></div><div><span className="check">✓</span><span><b>Returns during retirement</b><small>FD and equity returns continue at selected rates; no new contributions.</small></span></div></div></div>
+     <div className="disclaimer"><Info size={15}/><p><b>Illustrative projection, not a guarantee.</b> Actual market returns vary and can be negative. Taxes, fees, FD interest taxation, and changes to asset allocation are not included. A fixed 12% equity return every year is not realistic; test lower-return scenarios too.</p></div>
+    </section>
+   </div>
+   <footer>RETIREMENT PLANNER <span>•</span> Built for scenario planning <span>•</span> All calculations run locally</footer>
+  </main>
+ </div>;
+}
 createRoot(document.getElementById("root")).render(<App />);
